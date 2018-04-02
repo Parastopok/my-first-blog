@@ -1,6 +1,12 @@
+{% load staticfiles %}
 <html>
     <head>
         <title>parastopok's site</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">
     </head>
     <body>
         <div>
@@ -15,14 +21,14 @@
 
         <div>
             <p>published: 14.06.2017, 12:14</p>
-            <h2><a href="">second</a></h2>
+            <h3><a href="">second</a></h3>
             <p>Куча странного текста</p>
         </div>
 
         {% for post in posts %}
         <div>
             <p>published: {{ post.published_date }}</p>
-            <h3><a href="">{{ post.title }}</a></h3>
+            <h1><a href="">{{ post.title }}</a></h1>
             <p>{{ post.text|linebreaksbr }}</p>
         </div>
         {% endfor %}
