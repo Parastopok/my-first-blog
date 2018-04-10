@@ -1,10 +1,5 @@
 *.pyc
-*~
 __pycache__
 myvenv
 db.sqlite3
-<<<<<<< HEAD
-/static
-=======
->>>>>>> 715a1e91a416574bdeb93fba9bb717685a2bab61
-.DS_Store
+local_settings.py
